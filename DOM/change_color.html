@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        #btn{
+            background-color:blue;
+        }
+    </style>
+</head>
+<body id="btn">
+    <button onclick="color_change()">Click me</button>
+    <script>
+        function color_change(){
+            document.getElementById('btn').style.backgroundColor="blueviolet";
+          r=Number(Math.random()*255)
+          g=Number(Math.random()*255)
+          b=Number(Math.random()*255)
+          document.getElementById('btn').style.backgroundColor="rgb("+r+","+g+","+b+")";
+        }
+    </script>
+</body>
+</html>

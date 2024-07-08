@@ -6,20 +6,59 @@
     <title>Form_Validation</title>
 </head>
 <body>
-    <h2>JavaScript Validation</h2>
+    <h2>JavaScript Form Validation</h2>
 
     <form name="myform" onsubmit="return validateForm()" >
-        Name: <input type="text" name="fname"><br>
+        Name: <input type="text" id="fname" placeholder="enter your Name"><br><br>
+        Password: <input type="password" placeholder="enter you password " id="pword"><br><br>
+        Confirm Password: <input type="password" id="cpass" placeholder="enter the confirm password"><br><br>
+        Age: <input type="date" id="age" placeholder="enter the Age"><br><br>
+        Enrollment Number: <input type="text" id="enroll" placeholder="enter the Enrollment number"><br><br>
+        Email: <input type="email" id="email" placeholder="enter the email"><br><br>
         <input type="submit" value="Submit">
     </form>
     
 <script>
+    let d = new Date()
+    let u = new Date.getElementById(age).value
+
         function validateForm() {
-        let x = document.forms["myform"]["fname"].value;
-         if (x == "") {
-            alert("Name must be filled out");
+        let x = document.getElementById("fname").value;
+         if (x.length<8) {
+            alert("Minimum 8 characters required in username field");
+            //return false;
+        }
+        let pass=document.getElementById("pword").value;
+        let pattern = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+        var regex = new RegExp(pattern);
+        if (!regex.test(pass)) {
+            alert("Password must contain atleast 1 special character, 1 lowercase, 1 uppercase and 8 characters");
             return false;
         }
+        let y=document.getElementById("cpass").value;
+        if(pass!=y){
+            alert("Password and confirm password must be same");
+            return false;
+        }
+        let z=document.getElementById("age").value;
+        let today = d.getFullYear();
+        if(today-u<18){
+            alert("Age must be greater than 18");
+            return false;
+        }
+        let enroll=document.getElementById("enroll").value;
+        if(enroll.length!=11){
+            alert("Enrollment number must be of 11 characters");
+            return false;
+        }
+        let email=document.getElementById("email").value;
+        let pattern1 = /[a-zA-Z0-9]@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/;
+        var regex1 = new RegExp(pattern1);
+        if (!regex1.test(email)) {
+            alert("Enter a valid email");
+            return false;
+        }
+
     }
     </script>
 </body>
