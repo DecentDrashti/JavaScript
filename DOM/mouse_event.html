@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+      #btn{
+        background-color: aliceblue;
+      }
+    </style>
+</head>
+<body id="btn">
+    <button  id="btn1"onclick="change_color()"  >click here</button>
+    <button id="btn2"ondblclick="reset()"> click me</button>
+    <p id="myp" onmousedown="mouseDown()" onmouseup="mouseUp()">The mouseDown() function sets the color of this text to red.The mouseUp() function sets the color of this text to blue.</p>
+    <script> 
+    c=0
+    //a=prompt("enter the color to be change");
+    //a.change_color().backgroundColor="blue";
+    //change_color
+        function change_color(){
+            document.getElementById('btn').style.backgroundColor="pink";
+        }
+        function reset(){
+            document.getElementById('btn').style.backgroundColor="aliceblue";
+        }
+        document.getElementById("btn1").addEventListener("click", function() {
+        alert("Button was clicked!");})
+        document.getElementById("btn2").addEventListener("dblclick", function() {
+            alert("Bye bye..!");
+        });
+        function mouseDown(){
+            document.getElementById('myp').style.color="blue";
+        }
+        function mouseUp(){
+            document.getElementById('myp').style.color="red";
+        }
+        document.getElementById("myp").addEventListener("click",()=> {
+            if(c==0){
+                document.getElementById('myp').innerHTML="hey!how are you?";
+                c=1
+            }else{
+                document.getElementById('myp').innerHTML="The mouseDown() function sets the color of this text to red.The mouseUp() function sets the color of this text to blue.";
+                c=0
+            }
+        });
+    </script>
+    
+</body>
+</html>
