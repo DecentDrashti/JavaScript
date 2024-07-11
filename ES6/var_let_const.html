@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var_let_const</title>
+</head>
+<body>
+    <script>
+        a=10;
+        abc();
+        console.log("before:",a);
+        function abc(){
+            var a=20;
+            if(true){
+                let a=30;
+                if(true){
+                    const a=40;
+                    console.log("last inside:",a);
+                   
+                }
+                a=14;
+                console.log("print 14",a);
+                console.log("last second inside:",a);
+            }
+            console.log("second inside:",a);
+        }
+        //abc();
+    </script>
+</body>
+</html>

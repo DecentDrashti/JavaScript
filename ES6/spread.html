@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread</title>
+</head>
+<body>
+    <script>
+        //object ordered hoi ne Array ordered n hoi so sequence fer n pade
+         my_intro={
+            Name:"Drashti",
+            Surname:"Ruparelia",
+            Age:"19"
+        }
+        my_qualification={
+            ssc:"passed",
+            hsc:"just passed",
+            gujcet:"nikal gayi",
+            jee:"om shanti"
+        }
+         mine={
+            ...my_intro,
+            ...my_qualification
+
+         }
+         console.log(mine);
+    </script>
+</body>
+</html>
