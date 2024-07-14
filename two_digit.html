@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two digit separator</title>
+</head>
+<body>
+    <script>
+        a=parseInt(prompt("Enter any TWO DIGIT number between 9 to 100"));
+        while(a>99 || a<10){
+        a=parseInt(prompt("OOPS!!! It is not a two digit number...Enter any TWO DIGIT number between 9 to 100"));
+        }
+        let n1=a%10;
+        a=a-n1;
+        let n2=a/10;
+        let ans=Math.pow(n2,n1);
+        document.write("Here is your Answer:"+ans);
+    </script>
+</body>
+</html>
