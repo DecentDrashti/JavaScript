@@ -10,7 +10,7 @@
          let n=prompt("Enter the size of an array:");
          let arr=[];
          for(i=0; i<n; i++){
-            arr[i]=prompt("Enter arr"+i+"]=");
+            arr[i]=prompt("Enter arr["+i+"]=");
          }
          document.write("original:"+arr);
          document.write("<br>");
@@ -27,11 +27,12 @@
          document.write("after pop:"+arr);
          document.write("<br>");
 
-         arr.shift();
+         arr.shift();//removes the element at the zeroth index and shifts the values at conseutive indexes down then returns the removed value
          document.write("after shift:"+arr);
          document.write("<br>");
 
          arr.unshift(prompt("Enter element to unshift in an array:"));
+         //adds an element to the beginning of an array
          document.write("after unshift:"+arr);
          document.write("<br>");
 

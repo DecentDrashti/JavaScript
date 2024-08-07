@@ -11,6 +11,24 @@
         arr1=['one','two','three','four','five','six','seven','eight','nine']
         arr2=['eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
         arr3=['ten','twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety']
+        function numberToWords(a){
+             if(a==0){
+                console.log("zero");
+                return
+             }
+           // Array to store the powers of 10
+            let multiplier = ["","Thousand","Hundreds"];
+
+          // Array to store numbers till 20
+            let first_twenty = ["", "One", "Two","Three","Four","Five","Six", "Seven", "Eight","Nine", "Ten", "Eleven","Twelve", "Thirteen", "Fourteen","Fifteen", "Sixteen", "Seventeen","Eighteen", "Nineteen"]
+
+            // If number is less than 20, console.log without any
+            if (n < 20)
+            {
+                console.log(first_twenty[n])
+                 return
+            }
+        }
         if(a>=0||a<=999){
             if(a/100!=0){
               temp=a/100;
@@ -48,7 +66,7 @@
             //   a=Math.floor(a/10)
             // }
             document.write("valid number");
-        }else if(a<0||a>999){
+        if(a<0||a>999){
             document.write("out of range");
         }else{
             document.write("not a number");
