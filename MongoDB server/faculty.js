@@ -1,7 +1,7 @@
 const path= require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-const { default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 
 
 const app = express();
@@ -81,6 +81,6 @@ app.delete('/faculty/:id',(req,res)=>{
     res.send("faculty deleted");
 });
 
-app.listen((3010),()=>{
-    console.log('server obtained from 3010')
+app.listen((3008),()=>{
+    console.log('server obtained from 3008');
 })
